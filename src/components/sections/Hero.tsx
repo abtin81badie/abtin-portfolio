@@ -101,7 +101,6 @@ const Hero = () => {
           <ContactLink href="mailto:abtinbadie81@gmail.com">
             abtinbadie81@gmail.com
           </ContactLink>
-          <ContactLink href="tel:+989175688603">(+98) 917-568-8603</ContactLink>
           <ContactLink
             href="https://github.com/abtin81badie"
             target="_blank"
