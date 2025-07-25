@@ -5,6 +5,7 @@ import Hero from "./components/sections/Hero";
 import AboutMe from "./components/sections/AboutMe";
 import Education from "./components/sections/Education";
 import ResearchInterests from "./components/sections/ResearchInterests";
+import Resume from "./components/sections/Resume";
 import Honors from "./components/sections/Honors";
 import Experience from "./components/sections/Experience";
 import Projects from "./components/sections/Projects";
@@ -28,6 +29,7 @@ function App() {
       <Experience />
       <Projects />
       <Skills />
+      <Resume />
       <Footer />
     </AppContainer>
   );

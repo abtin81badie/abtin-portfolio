@@ -179,6 +179,16 @@ const Navbar = () => {
               Skills
             </NavLinks>
           </NavItem>
+          <NavItem>
+            <NavLinks
+              to="resume"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
+              Resume
+            </NavLinks>
+          </NavItem>
         </NavMenu>
       </NavbarContainer>
     </Nav>
