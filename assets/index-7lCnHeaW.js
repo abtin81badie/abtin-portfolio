@@ -200,7 +200,7 @@ Error generating stack: `+l.message+`
   @media screen and (max-width: 480px) {
     margin: 10px 0;
   }
-`,fg=()=>V.jsxs(lg,{id:"hero",children:[V.jsx(ng,{}),V.jsxs(ag,{children:["[cite_start]",V.jsx(ug,{children:"Abtin Badiee [cite: 1]"}),"[cite_start]",V.jsx(ig,{children:"Computer Engineer [cite: 1]"}),V.jsxs(cg,{children:["[cite_start]",V.jsx(Ar,{href:"mailto:abtinbadie81@gmail.com",children:"abtinbadie81@gmail.com [cite: 1]"}),"[cite_start]",V.jsx(Ar,{href:"tel:+989175688603",children:"(+98) 917-568-8603 [cite: 1]"}),"[cite_start]",V.jsx(Ar,{href:"https://github.com/abtin81badie",target:"_blank",rel:"noopener noreferrer",children:"GitHub [cite: 1]"})]})]})]}),rg=nt.div`
+`,fg=()=>V.jsxs(lg,{id:"hero",children:[V.jsx(ng,{}),V.jsxs(ag,{children:[V.jsx(ug,{children:"Abtin Badiee"}),V.jsx(ig,{children:"Computer Engineer"}),V.jsxs(cg,{children:[V.jsx(Ar,{href:"mailto:abtinbadie81@gmail.com",children:"abtinbadie81@gmail.com"}),V.jsx(Ar,{href:"tel:+989175688603",children:"(+98) 917-568-8603"}),V.jsx(Ar,{href:"https://github.com/abtin81badie",target:"_blank",rel:"noopener noreferrer",children:"GitHub"})]})]})]}),rg=nt.div`
   padding: 100px 0;
   background: #ffffff;
 `,og=nt.div`
@@ -232,7 +232,7 @@ Error generating stack: `+l.message+`
 `,zr=nt.p`
   font-size: 1.2rem;
   margin-bottom: 8px;
-`,vg=()=>V.jsx(rg,{id:"education",children:V.jsxs(og,{children:[V.jsx(sg,{children:"Education"}),V.jsxs(dg,{children:["[cite_start]",V.jsx(hg,{children:"Iran University of Science and Technology (IUST) [cite: 2]"}),V.jsxs(zr,{children:[V.jsx("strong",{children:"B.Sc. [cite_start]Computer Engineering"})," [cite: 2]"]}),"[cite_start]",V.jsxs(zr,{children:[V.jsx("strong",{children:"Expected Graduation:"})," Fall 2025 [cite: 2]"]}),"[cite_start]",V.jsxs(zr,{children:[V.jsx("strong",{children:"GPA:"})," 18.87/20 (3.99/4) [cite: 2]"]})]})]})}),mg=nt.div`
+`,vg=()=>V.jsx(rg,{id:"education",children:V.jsxs(og,{children:[V.jsx(sg,{children:"Education"}),V.jsxs(dg,{children:[V.jsx(hg,{children:"Iran University of Science and Technology (IUST)"}),V.jsx(zr,{children:V.jsx("strong",{children:"B.Sc. Computer Engineering"})}),V.jsxs(zr,{children:[V.jsx("strong",{children:"Expected Graduation:"})," Fall 2025"]}),V.jsxs(zr,{children:[V.jsx("strong",{children:"GPA:"})," 18.87/20 (3.99/4)"]})]})]})}),mg=nt.div`
   padding: 100px 0;
   background: #f4f7f9;
 `,yg=nt.div`
@@ -261,7 +261,7 @@ Error generating stack: `+l.message+`
   font-size: 1rem;
   color: #666;
   margin-top: 5px;
-`,Sg=()=>V.jsx(mg,{id:"honors",children:V.jsxs(yg,{children:[V.jsx(pg,{children:"Honors and Awards"}),V.jsxs(gg,{children:[V.jsxs(Mv,{children:[V.jsx(Rv,{children:"Ranked 2nd among first-year cohorts"}),V.jsx(Dv,{children:"2022 - Iran University of Science and Technology"})]}),V.jsxs(Mv,{children:[V.jsx(Rv,{children:"Ranked 1st for academic achievement"}),"[cite_start]",V.jsx(Dv,{children:"2018, 2019, 2021 - Tohid High School and Ehsan School [cite: 3]"})]})]})]})}),bg=nt.div`
+`,Sg=()=>V.jsx(mg,{id:"honors",children:V.jsxs(yg,{children:[V.jsx(pg,{children:"Honors and Awards"}),V.jsxs(gg,{children:[V.jsxs(Mv,{children:[V.jsx(Rv,{children:"Ranked 2nd among first-year cohorts"}),V.jsx(Dv,{children:"2022 - Iran University of Science and Technology"})]}),V.jsxs(Mv,{children:[V.jsx(Rv,{children:"Ranked 1st for academic achievement"}),V.jsx(Dv,{children:"2018, 2019, 2021 - Tohid High School and Ehsan School"})]})]})]})}),bg=nt.div`
   padding: 100px 0;
   background: #ffffff;
 `,Eg=nt.div`
