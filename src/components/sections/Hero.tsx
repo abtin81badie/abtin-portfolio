@@ -1,3 +1,4 @@
+// src/components/sections/Hero.tsx
 import React from "react";
 import styled from "styled-components";
 
@@ -94,24 +95,19 @@ const Hero = () => {
     <HeroContainer id="hero">
       <HeroBg />
       <HeroContent>
-        [cite_start]<HeroH1>Abtin Badiee [cite: 1]</HeroH1>
-        [cite_start]<HeroP>Computer Engineer [cite: 1]</HeroP>
+        <HeroH1>Abtin Badiee</HeroH1>
+        <HeroP>Computer Engineer</HeroP>
         <ContactInfo>
-          [cite_start]
           <ContactLink href="mailto:abtinbadie81@gmail.com">
-            abtinbadie81@gmail.com [cite: 1]
+            abtinbadie81@gmail.com
           </ContactLink>
-          [cite_start]
-          <ContactLink href="tel:+989175688603">
-            (+98) 917-568-8603 [cite: 1]
-          </ContactLink>
-          [cite_start]
+          <ContactLink href="tel:+989175688603">(+98) 917-568-8603</ContactLink>
           <ContactLink
             href="https://github.com/abtin81badie"
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub [cite: 1]
+            GitHub
           </ContactLink>
         </ContactInfo>
       </HeroContent>

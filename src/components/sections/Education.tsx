@@ -52,20 +52,17 @@ const Education = () => {
       <SectionWrapper>
         <SectionTitle>Education</SectionTitle>
         <EducationCard>
-          [cite_start]
           <UniversityName>
-            Iran University of Science and Technology (IUST) [cite: 2]
+            Iran University of Science and Technology (IUST)
           </UniversityName>
           <DegreeInfo>
-            <strong>B.Sc. [cite_start]Computer Engineering</strong> [cite: 2]
+            <strong>B.Sc. Computer Engineering</strong>
           </DegreeInfo>
-          [cite_start]
           <DegreeInfo>
-            <strong>Expected Graduation:</strong> Fall 2025 [cite: 2]
+            <strong>Expected Graduation:</strong> Fall 2025
           </DegreeInfo>
-          [cite_start]
           <DegreeInfo>
-            <strong>GPA:</strong> 18.87/20 (3.99/4) [cite: 2]
+            <strong>GPA:</strong> 18.87/20 (3.99/4)
           </DegreeInfo>
         </EducationCard>
       </SectionWrapper>

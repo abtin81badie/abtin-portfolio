@@ -59,9 +59,8 @@ const Honors = () => {
           </HonorItem>
           <HonorItem>
             <HonorTitle>Ranked 1st for academic achievement</HonorTitle>
-            [cite_start]
             <HonorYear>
-              2018, 2019, 2021 - Tohid High School and Ehsan School [cite: 3]
+              2018, 2019, 2021 - Tohid High School and Ehsan School
             </HonorYear>
           </HonorItem>
         </HonorsList>
