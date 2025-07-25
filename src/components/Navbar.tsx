@@ -98,35 +98,84 @@ const NavLinks = styled(Link)`
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // This function flips the menu state (open/close)
   const toggle = () => setIsOpen(!isOpen);
+
+  // This function specifically closes the menu
+  const closeMobileMenu = () => setIsOpen(false);
 
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="hero" smooth={true} duration={500}>
+        <NavLogo
+          to="hero"
+          smooth={true}
+          duration={500}
+          onClick={closeMobileMenu}
+        >
           Abtin Badiee
         </NavLogo>
         <MobileIcon onClick={toggle}>
           {isOpen ? <>&#10005;</> : <>&#9776;</>}
         </MobileIcon>
-        <NavMenu isOpen={isOpen} onClick={toggle}>
+        <NavMenu isOpen={isOpen}>
           <NavItem>
-            <NavLinks to="education" smooth={true} duration={500}>
+            <NavLinks
+              to="aboutme"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
+              About Me
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="education"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
               Education
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="experience" smooth={true} duration={500}>
+            <NavLinks
+              to="researchinterests"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
+              Research
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="experience"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
               Experience
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="projects" smooth={true} duration={500}>
+            <NavLinks
+              to="projects"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
               Projects
             </NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="skills" smooth={true} duration={500}>
+            <NavLinks
+              to="skills"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
               Skills
             </NavLinks>
           </NavItem>

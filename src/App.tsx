@@ -1,9 +1,10 @@
-// src/App.tsx
 import React from "react";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import Hero from "./components/sections/Hero";
+import AboutMe from "./components/sections/AboutMe";
 import Education from "./components/sections/Education";
+import ResearchInterests from "./components/sections/ResearchInterests";
 import Honors from "./components/sections/Honors";
 import Experience from "./components/sections/Experience";
 import Projects from "./components/sections/Projects";
@@ -20,7 +21,9 @@ function App() {
     <AppContainer>
       <Navbar />
       <Hero />
+      <AboutMe />
       <Education />
+      <ResearchInterests />
       <Honors />
       <Experience />
       <Projects />

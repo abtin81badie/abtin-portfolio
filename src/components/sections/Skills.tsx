@@ -1,4 +1,3 @@
-// src/components/sections/Skills.tsx
 import React from "react";
 import styled from "styled-components";
 
