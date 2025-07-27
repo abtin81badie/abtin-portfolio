@@ -61,7 +61,7 @@ const AboutMe = () => {
   return (
     <SectionContainer id="aboutme">
       <SectionWrapper>
-        <ProfilePhoto src={profileImage} alt="Abtin Badiee" />
+        <ProfilePhoto src={profileImage} alt="Abtin Badie" />
         <AboutTextWrapper>
           <SectionTitle>About Me</SectionTitle>
           <AboutParagraph>

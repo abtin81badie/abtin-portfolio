@@ -51,6 +51,12 @@ const Honors = () => {
         <SectionTitle>Honors and Awards</SectionTitle>
         <HonorsList>
           <HonorItem>
+            <HonorTitle>Top 10% Undergraduate Student</HonorTitle>
+            <HonorYear>
+              Iran University of Science and Technology (Present)
+            </HonorYear>
+          </HonorItem>
+          <HonorItem>
             <HonorTitle>Ranked 2nd among first-year cohorts</HonorTitle>
             <HonorYear>
               2022 - Iran University of Science and Technology

@@ -48,7 +48,7 @@ const Footer = () => {
           <SocialLink href="mailto:abtinbadie81@gmail.com">Email</SocialLink>
         </SocialLinks>
         <FooterText>
-          © {new Date().getFullYear()} Abtin Badiee. All rights reserved.
+          © {new Date().getFullYear()} Abtin Badie. All rights reserved.
         </FooterText>
       </FooterWrapper>
     </FooterContainer>

@@ -113,7 +113,7 @@ const Navbar = () => {
           duration={500}
           onClick={closeMobileMenu}
         >
-          Abtin Badiee
+          Abtin Badie
         </NavLogo>
         <MobileIcon onClick={toggle}>
           {isOpen ? <>&#10005;</> : <>&#9776;</>}

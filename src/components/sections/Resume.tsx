@@ -59,7 +59,7 @@ const Resume = () => {
         <DownloadButton
           // 2. Use the imported variable as the href
           href={resumeFile}
-          download="Abtin_Badiee_CV.pdf" // This sets the downloaded file's name
+          download="Abtin_Badie_CV.pdf" // This sets the downloaded file's name
         >
           Download Resume
         </DownloadButton>

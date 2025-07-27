@@ -94,7 +94,7 @@ const Hero = () => {
     <HeroContainer id="hero">
       <HeroBg />
       <HeroContent>
-        <HeroH1>Abtin Badiee</HeroH1>
+        <HeroH1>Abtin Badie</HeroH1>
         <HeroP>Computer Engineer</HeroP>
         <ContactInfo>
           <ContactLink href="mailto:abtinbadie81@gmail.com">
