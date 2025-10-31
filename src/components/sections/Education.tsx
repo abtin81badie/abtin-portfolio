@@ -61,7 +61,7 @@ const Education = () => {
             <strong>Expected Graduation:</strong> Fall 2025
           </DegreeInfo>
           <DegreeInfo>
-            <strong>GPA:</strong> 18.87/20 (3.99/4)
+            <strong>GPA:</strong> 18.79/20 (3.97/4)
           </DegreeInfo>
         </EducationCard>
       </SectionWrapper>
