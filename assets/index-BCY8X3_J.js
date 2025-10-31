@@ -273,7 +273,7 @@ Error generating stack: `+n.message+`
 `,Of=W.p`
   font-size: 1.2rem;
   margin-bottom: 8px;
-`,_y=()=>j.jsx(yy,{id:"education",children:j.jsxs(by,{children:[j.jsx(Sy,{children:"Education"}),j.jsxs(Ty,{children:[j.jsx(Ey,{children:"Iran University of Science and Technology (IUST)"}),j.jsx(Of,{children:j.jsx("strong",{children:"B.Sc. Computer Engineering"})}),j.jsxs(Of,{children:[j.jsx("strong",{children:"Expected Graduation:"})," Fall 2025"]}),j.jsxs(Of,{children:[j.jsx("strong",{children:"GPA:"})," 18.87/20 (3.99/4)"]})]})]})}),xy=W.div`
+`,_y=()=>j.jsx(yy,{id:"education",children:j.jsxs(by,{children:[j.jsx(Sy,{children:"Education"}),j.jsxs(Ty,{children:[j.jsx(Ey,{children:"Iran University of Science and Technology (IUST)"}),j.jsx(Of,{children:j.jsx("strong",{children:"B.Sc. Computer Engineering"})}),j.jsxs(Of,{children:[j.jsx("strong",{children:"Expected Graduation:"})," Fall 2025"]}),j.jsxs(Of,{children:[j.jsx("strong",{children:"GPA:"})," 18.79/20 (3.97/4)"]})]})]})}),xy=W.div`
   padding: 100px 0;
   background: #f4f7f9;
 `,Oy=W.div`
@@ -307,7 +307,7 @@ Error generating stack: `+n.message+`
   font-size: 1rem;
   margin-bottom: 10px;
   line-height: 1.5;
-`,Hy={"Deep Learning":["Convolutional Neural Networks (CNNs)","Recurrent Neural Networks (RNNs) & LSTMs","Transformer Architectures"],"Machine Learning":["Classical Algorithms (Decision Trees, SVMs)","Genetic Algorithms","Reinforcement Learning"],"Natural Language Processing (NLP)":["Medical NLP & Report Generation","Agentic Workflows & Tool Use"],"Large Language Models (LLMs)":["Fine-tuning & Model Specialization","Autonomous Agent Systems"],"Computer Vision":["Medical Image Captioning","Multimodal Learning (Video-Text Retrieval)"]},Ny=()=>j.jsx(xy,{id:"researchinterests",children:j.jsxs(Oy,{children:[j.jsx(Ay,{children:"Research Interests"}),j.jsx(zy,{children:Object.entries(Hy).map(([i,r])=>j.jsxs(My,{children:[j.jsx(Ry,{children:i}),j.jsx(Dy,{children:r.map((s,f)=>j.jsx(jy,{children:s},f))})]},i))})]})}),Uy="/abtin-portfolio/assets/AbtinBadie_CV_Website-eFF8TAB4.pdf",Cy=W.div`
+`,Hy={"Deep Learning":["Convolutional Neural Networks (CNNs)","Recurrent Neural Networks (RNNs) & LSTMs","Transformer Architectures"],"Machine Learning":["Classical Algorithms (Decision Trees, SVMs)","Genetic Algorithms","Reinforcement Learning"],"Natural Language Processing (NLP)":["Medical NLP & Report Generation","Agentic Workflows & Tool Use"],"Large Language Models (LLMs)":["Fine-tuning & Model Specialization","Autonomous Agent Systems"],"Computer Vision":["Medical Image Captioning","Multimodal Learning (Video-Text Retrieval)"]},Ny=()=>j.jsx(xy,{id:"researchinterests",children:j.jsxs(Oy,{children:[j.jsx(Ay,{children:"Research Interests"}),j.jsx(zy,{children:Object.entries(Hy).map(([i,r])=>j.jsxs(My,{children:[j.jsx(Ry,{children:i}),j.jsx(Dy,{children:r.map((s,f)=>j.jsx(jy,{children:s},f))})]},i))})]})}),Uy="/abtin-portfolio/assets/AbtinBadie_CV_Website-DMUKY0H-.pdf",Cy=W.div`
   padding: 100px 0;
   background: #ffffff;
   text-align: center;
