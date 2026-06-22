@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 const SectionContainer = styled.div`
   padding: 100px 0;
-  background: #ffffff;
+  background: ${theme.colors.bgAlt};
 `;
 
 const SectionWrapper = styled.div`
@@ -14,60 +15,123 @@ const SectionWrapper = styled.div`
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
-  color: #333;
   margin-bottom: 64px;
   text-align: center;
+  background: ${theme.gradient};
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const SkillsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 26px;
 `;
 
-const SkillCategory = styled.div`
-  background: #f9f9f9;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+const SkillCategory = styled.div<{ $accent: string }>`
+  background: ${theme.colors.card};
+  padding: 26px;
+  border-radius: ${theme.radius};
+  border: 1px solid ${theme.colors.border};
+  border-top: 4px solid ${({ $accent }) => $accent};
+  box-shadow: ${theme.shadow};
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: ${theme.shadowHover};
+  }
 `;
 
-const CategoryTitle = styled.h3`
-  font-size: 1.5rem;
-  color: #007bff;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
+const CategoryTitle = styled.h3<{ $accent: string }>`
+  font-size: 1.3rem;
+  color: ${({ $accent }) => $accent};
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
-const SkillList = styled.ul`
-  list-style: none;
-  padding: 0;
+const ChipWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
 `;
 
-const SkillItem = styled.li`
-  font-size: 1rem;
-  margin-bottom: 10px;
-  line-height: 1.5;
+const Chip = styled.span<{ $accent: string }>`
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: 999px;
+  color: ${({ $accent }) => $accent};
+  background: ${({ $accent }) => `${$accent}14`};
+  border: 1px solid ${({ $accent }) => `${$accent}33`};
 `;
 
-const skillsData = {
-  "AI & Machine Learning": [
-    "Frameworks/Libraries: TensorFlow, PyTorch, Keras, LangChain, Scikit-learn, NumPy, Pandas",
-    "Core Concepts: Deep Learning (CNNs, RNNs, Transformers), LLMs, Natural Language Processing (NLP), Computer Vision",
-  ],
-  "Web Development & Programming": [
-    "Languages: Python, JavaScript, TypeScript, Go, SQL, C/C++",
-    "Backend: FastAPI, Django, Fiber (Go), GORM",
-    "Frontend: React, HTML5, CSS3",
-    "Databases: PostgreSQL, MySQL",
-  ],
-  "DevOps, Tools & Professional": [
-    "Tools & Platforms: Git, Docker, Linux, Bash, CI/CD",
-    "Mobile Development: Android, Kotlin",
-    "Professional Skills: Teamwork, Team Leadership",
-  ],
-};
+const skillsData: { title: string; icon: string; accent: string; skills: string[] }[] = [
+  {
+    title: "AI & Machine Learning",
+    icon: "🧠",
+    accent: theme.colors.primary,
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "Keras",
+      "Scikit-learn",
+      "LangChain",
+      "Hugging Face",
+      "NumPy",
+      "Pandas",
+      "Deep Learning",
+      "CNNs",
+      "RNNs / LSTMs",
+      "Transformers",
+      "LLMs",
+      "NLP",
+      "Computer Vision",
+      "PEFT / LoRA",
+    ],
+  },
+  {
+    title: "Web & Programming",
+    icon: "💻",
+    accent: theme.colors.pink,
+    skills: [
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "Go",
+      "SQL",
+      "C / C++",
+      "FastAPI",
+      "Django",
+      "Fiber (Go)",
+      "GORM",
+      "React",
+      "HTML5",
+      "CSS3",
+      "PostgreSQL",
+      "MySQL",
+    ],
+  },
+  {
+    title: "DevOps, Tools & Professional",
+    icon: "⚙️",
+    accent: theme.colors.cyan,
+    skills: [
+      "Git",
+      "Docker",
+      "Linux",
+      "Bash",
+      "CI/CD",
+      "Android",
+      "Kotlin",
+      "Teamwork",
+      "Team Leadership",
+    ],
+  },
+];
 
 const Skills = () => {
   return (
@@ -75,14 +139,19 @@ const Skills = () => {
       <SectionWrapper>
         <SectionTitle>Skills</SectionTitle>
         <SkillsGrid>
-          {Object.entries(skillsData).map(([category, skills]) => (
-            <SkillCategory key={category}>
-              <CategoryTitle>{category}</CategoryTitle>
-              <SkillList>
-                {skills.map((skill, index) => (
-                  <SkillItem key={index}>{skill}</SkillItem>
+          {skillsData.map((cat) => (
+            <SkillCategory key={cat.title} $accent={cat.accent}>
+              <CategoryTitle $accent={cat.accent}>
+                <span>{cat.icon}</span>
+                {cat.title}
+              </CategoryTitle>
+              <ChipWrap>
+                {cat.skills.map((skill) => (
+                  <Chip key={skill} $accent={cat.accent}>
+                    {skill}
+                  </Chip>
                 ))}
-              </SkillList>
+              </ChipWrap>
             </SkillCategory>
           ))}
         </SkillsGrid>

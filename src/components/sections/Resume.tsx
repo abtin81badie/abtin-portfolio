@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../theme";
 import resumeFile from "../../assets/AbtinBadie_CV_Website.pdf";
 
 const SectionContainer = styled.div`
   padding: 100px 0;
-  background: #ffffff;
+  background: ${theme.colors.bgAlt};
   text-align: center;
 `;
 
@@ -19,8 +20,11 @@ const SectionWrapper = styled.div`
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
-  color: #333;
   margin-bottom: 24px;
+  background: ${theme.gradient};
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const SectionParagraph = styled.p`
@@ -32,18 +36,19 @@ const SectionParagraph = styled.p`
 `;
 
 const DownloadButton = styled.a`
-  background-color: #007bff;
+  background: ${theme.gradient};
   color: #fff;
-  padding: 15px 30px;
+  padding: 15px 34px;
   border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.15rem;
+  font-weight: 700;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 24px rgba(236, 72, 153, 0.3);
 
   &:hover {
-    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(99, 102, 241, 0.4);
   }
 `;
 

@@ -5,11 +5,13 @@ import Hero from "./components/sections/Hero";
 import AboutMe from "./components/sections/AboutMe";
 import Education from "./components/sections/Education";
 import ResearchInterests from "./components/sections/ResearchInterests";
+import FeaturedProject from "./components/sections/FeaturedProject";
 import Resume from "./components/sections/Resume";
 import Honors from "./components/sections/Honors";
 import Experience from "./components/sections/Experience";
 import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
+import Certifications from "./components/sections/Certifications";
 import Footer from "./components/sections/Footer";
 
 const AppContainer = styled.div`
@@ -25,10 +27,12 @@ function App() {
       <AboutMe />
       <Education />
       <ResearchInterests />
+      <FeaturedProject />
       <Honors />
       <Experience />
       <Projects />
       <Skills />
+      <Certifications />
       <Resume />
       <Footer />
     </AppContainer>

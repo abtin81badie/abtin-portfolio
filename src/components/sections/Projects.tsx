@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 // SVG for the GitHub icon to avoid external dependencies
+const GithubSvg = styled.svg`
+  margin-left: 10px;
+  color: ${theme.colors.textMuted};
+`;
+
 const GithubIcon = () => (
-  <svg
-    height="24px"
-    width="24px"
-    viewBox="0 0 16 16"
-    fill="currentColor"
-    style={{ marginLeft: '10px' }}
-  >
+  <GithubSvg height="22px" width="22px" viewBox="0 0 16 16" fill="currentColor">
     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-  </svg>
+  </GithubSvg>
 );
 
 
 const SectionContainer = styled.div`
   padding: 100px 0;
-  background: #f4f7f9;
+  background: ${theme.colors.bg};
 `;
 
 const SectionWrapper = styled.div`
@@ -28,9 +28,12 @@ const SectionWrapper = styled.div`
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
-  color: #333;
   margin-bottom: 64px;
   text-align: center;
+  background: ${theme.gradient};
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const ProjectsGrid = styled.div`
@@ -39,18 +42,20 @@ const ProjectsGrid = styled.div`
   gap: 30px;
 `;
 
-const ProjectCard = styled.div`
-  background: #ffffff;
+const ProjectCard = styled.div<{ $accent: string }>`
+  background: ${theme.colors.card};
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: ${theme.radius};
+  border: 1px solid ${theme.colors.border};
+  border-top: 4px solid ${({ $accent }) => $accent};
+  box-shadow: ${theme.shadow};
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+    box-shadow: ${theme.shadowHover};
   }
 `;
 
@@ -61,12 +66,13 @@ const ProjectTitleWrapper = styled.div`
 `;
 
 const ProjectTitleLink = styled.a`
-  font-size: 1.4rem;
-  color: #007bff;
+  font-size: 1.35rem;
+  color: ${theme.colors.heading};
   text-decoration: none;
-  font-weight: bold;
-  
+  font-weight: 700;
+
   &:hover {
+    color: ${theme.colors.primary};
     text-decoration: underline;
   }
 `;
@@ -83,13 +89,23 @@ const ProjectDetailItem = styled.li`
   margin-bottom: 10px;
 `;
 
-const TechList = styled.p`
-  font-size: 0.9rem;
-  font-style: italic;
-  color: #666;
+const TechWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin-top: 20px;
-  border-top: 1px solid #eee;
-  padding-top: 15px;
+  border-top: 1px solid ${theme.colors.border};
+  padding-top: 16px;
+`;
+
+const TechChip = styled.span<{ $accent: string }>`
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 999px;
+  color: ${({ $accent }) => $accent};
+  background: ${({ $accent }) => `${$accent}14`};
+  border: 1px solid ${({ $accent }) => `${$accent}33`};
 `;
 
 // Updated project data transcribed from your LaTeX file
@@ -193,26 +209,33 @@ const Projects = () => {
       <SectionWrapper>
         <SectionTitle>Projects</SectionTitle>
         <ProjectsGrid>
-          {projects.map((proj, index) => (
-            <ProjectCard key={index}>
-              <ProjectTitleWrapper>
-                <ProjectTitleLink href={proj.github} target="_blank" rel="noopener noreferrer">
-                  {proj.title}
-                </ProjectTitleLink>
-                {proj.github && <GithubIcon />}
-              </ProjectTitleWrapper>
-              
-              <ProjectDetailsList>
-                {proj.details.map((item, i) => (
-                  <ProjectDetailItem key={i}>{item}</ProjectDetailItem>
-                ))}
-              </ProjectDetailsList>
-              
-              <TechList>
-                <strong>Technologies:</strong> {proj.tech}
-              </TechList>
-            </ProjectCard>
-          ))}
+          {projects.map((proj, index) => {
+            const accent = theme.accents[index % theme.accents.length];
+            return (
+              <ProjectCard key={index} $accent={accent}>
+                <ProjectTitleWrapper>
+                  <ProjectTitleLink href={proj.github} target="_blank" rel="noopener noreferrer">
+                    {proj.title}
+                  </ProjectTitleLink>
+                  {proj.github && <GithubIcon />}
+                </ProjectTitleWrapper>
+
+                <ProjectDetailsList>
+                  {proj.details.map((item, i) => (
+                    <ProjectDetailItem key={i}>{item}</ProjectDetailItem>
+                  ))}
+                </ProjectDetailsList>
+
+                <TechWrap>
+                  {proj.tech.split(",").map((t) => (
+                    <TechChip key={t} $accent={accent}>
+                      {t.trim()}
+                    </TechChip>
+                  ))}
+                </TechWrap>
+              </ProjectCard>
+            );
+          })}
         </ProjectsGrid>
       </SectionWrapper>
     </SectionContainer>

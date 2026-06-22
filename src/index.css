@@ -1,22 +1,49 @@
 /* src/index.css */
+:root {
+  --brand: #6366f1;
+  --brand-2: #8b5cf6;
+  --brand-3: #ec4899;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f4f7f9;
-  color: #333;
+  background-color: #f5f6fc;
+  color: #1f2430;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Colorful text selection */
+::selection {
+  background: rgba(139, 92, 246, 0.25);
+  color: #161a23;
+}
+
+/* Slim gradient scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #eef0f8;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  border-radius: 999px;
 }

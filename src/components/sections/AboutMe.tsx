@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../theme";
 import profileImage from "../../assets/profile.jpg";
 
 const SectionContainer = styled.div`
   padding: 100px 0;
-  background: #ffffff;
+  background: ${theme.colors.bg};
 `;
 
 const SectionWrapper = styled.div`
@@ -27,8 +28,10 @@ const ProfilePhoto = styled.img`
   height: 250px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   justify-self: center;
+  padding: 6px;
+  background: ${theme.gradient};
+  box-shadow: 0 14px 34px rgba(99, 102, 241, 0.3);
 `;
 
 const AboutTextWrapper = styled.div`
@@ -38,6 +41,11 @@ const AboutTextWrapper = styled.div`
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 24px;
+  background: ${theme.gradient};
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 `;
 
 const AboutParagraph = styled.p`
@@ -49,10 +57,11 @@ const AboutParagraph = styled.p`
 const ContactLink = styled.a`
   font-size: 1.1rem;
   font-weight: bold;
-  color: #007bff;
+  color: ${theme.colors.primary};
   text-decoration: none;
 
   &:hover {
+    color: ${theme.colors.pink};
     text-decoration: underline;
   }
 `;
@@ -65,10 +74,11 @@ const AboutMe = () => {
         <AboutTextWrapper>
           <SectionTitle>About Me</SectionTitle>
           <AboutParagraph>
-            As a passionate Computer Engineer, I am driven by a deep-seated
-            curiosity for technology and a love for continuous learning. I
-            thrive on tackling new challenges and embracing novel experiences,
-            both in my academic pursuits and personal life.
+            I'm a final-year Computer Engineering student at IUST who loves
+            building things end-to-end — from deep-learning research in our NLP
+            Lab to production back-ends as a Back End Developer at Namava. My work
+            spans medical AI (my thesis, NeoScan), LLMs &amp; agents, computer
+            vision, and full-stack development with Python, Go, C#/.NET and React.
           </AboutParagraph>
           <AboutParagraph>
             Outside of technology, I find balance and inspiration in various

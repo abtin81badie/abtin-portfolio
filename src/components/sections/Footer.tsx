@@ -25,7 +25,7 @@ const SocialLink = styled.a`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #007bff;
+    color: #c4b5fd;
   }
 `;
 
@@ -39,11 +39,25 @@ const Footer = () => {
       <FooterWrapper>
         <SocialLinks>
           <SocialLink
+            href="https://www.linkedin.com/in/abtin-badie-262690234/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </SocialLink>
+          <SocialLink
             href="https://github.com/abtin81badie"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
+          </SocialLink>
+          <SocialLink
+            href="https://t.me/Abtin_003"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Telegram
           </SocialLink>
           <SocialLink href="mailto:abtinbadie81@gmail.com">Email</SocialLink>
         </SocialLinks>

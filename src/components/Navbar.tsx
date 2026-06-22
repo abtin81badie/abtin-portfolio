@@ -30,15 +30,18 @@ const NavbarContainer = styled.div`
 `;
 
 const NavLogo = styled(Link)`
-  color: #333;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   margin-left: 24px;
-  font-weight: bold;
+  font-weight: 800;
   text-decoration: none;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const MobileIcon = styled.div`
@@ -82,16 +85,24 @@ const NavItem = styled.li`
 `;
 
 const NavLinks = styled(Link)`
-  color: #333;
+  color: #1f2430;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  border-bottom: 3px solid transparent;
+
+  &:hover {
+    color: #6366f1;
+  }
 
   &.active {
-    border-bottom: 3px solid #007bff;
+    color: #6366f1;
+    border-bottom: 3px solid #8b5cf6;
   }
 `;
 
@@ -151,6 +162,16 @@ const Navbar = () => {
           </NavItem>
           <NavItem>
             <NavLinks
+              to="featured"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
+              Featured
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
               to="experience"
               smooth={true}
               duration={500}
@@ -177,6 +198,16 @@ const Navbar = () => {
               onClick={closeMobileMenu}
             >
               Skills
+            </NavLinks>
+          </NavItem>
+          <NavItem>
+            <NavLinks
+              to="certifications"
+              smooth={true}
+              duration={500}
+              onClick={closeMobileMenu}
+            >
+              Certifications
             </NavLinks>
           </NavItem>
           <NavItem>

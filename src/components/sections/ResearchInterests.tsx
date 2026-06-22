@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 const SectionContainer = styled.div`
   padding: 100px 0;
-  background: #f4f7f9;
+  background: ${theme.colors.bg};
 `;
 
 const SectionWrapper = styled.div`
@@ -14,30 +15,51 @@ const SectionWrapper = styled.div`
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
-  color: #333;
   margin-bottom: 64px;
   text-align: center;
+  background: ${theme.gradient};
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const InterestsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 26px;
 `;
 
-const InterestCard = styled.div`
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+const InterestCard = styled.div<{ $accent: string }>`
+  background: ${theme.colors.card};
+  padding: 26px;
+  border-radius: ${theme.radius};
+  border: 1px solid ${theme.colors.border};
+  box-shadow: ${theme.shadow};
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: ${({ $accent }) => $accent};
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: ${theme.shadowHover};
+  }
 `;
 
-const InterestTitle = styled.h3`
-  font-size: 1.5rem;
-  color: #007bff;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
+const InterestTitle = styled.h3<{ $accent: string }>`
+  font-size: 1.25rem;
+  color: ${({ $accent }) => $accent};
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
 const SubfieldList = styled.ul`
@@ -49,32 +71,56 @@ const SubfieldItem = styled.li`
   font-size: 1rem;
   margin-bottom: 10px;
   line-height: 1.5;
+  color: ${theme.colors.text};
+  padding-left: 18px;
+  position: relative;
+
+  &::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: ${theme.colors.violet};
+  }
 `;
 
-const interests = {
-  "Deep Learning": [
-    "Convolutional Neural Networks (CNNs)",
-    "Recurrent Neural Networks (RNNs) & LSTMs",
-    "Transformer Architectures",
-  ],
-  "Machine Learning": [
-    "Classical Algorithms (Decision Trees, SVMs)",
-    "Genetic Algorithms",
-    "Reinforcement Learning",
-  ],
-  "Natural Language Processing (NLP)": [
-    "Medical NLP & Report Generation",
-    "Agentic Workflows & Tool Use",
-  ],
-  "Large Language Models (LLMs)": [
-    "Fine-tuning & Model Specialization",
-    "Autonomous Agent Systems",
-  ],
-  "Computer Vision": [
-    "Medical Image Captioning",
-    "Multimodal Learning (Video-Text Retrieval)",
-  ],
-};
+const interests = [
+  {
+    title: "Deep Learning",
+    icon: "🔬",
+    items: [
+      "Convolutional Neural Networks (CNNs)",
+      "Recurrent Neural Networks (RNNs) & LSTMs",
+      "Transformer Architectures",
+    ],
+  },
+  {
+    title: "Machine Learning",
+    icon: "📊",
+    items: [
+      "Classical Algorithms (Decision Trees, SVMs)",
+      "Genetic Algorithms",
+      "Reinforcement Learning",
+    ],
+  },
+  {
+    title: "Natural Language Processing",
+    icon: "💬",
+    items: ["Medical NLP & Report Generation", "Agentic Workflows & Tool Use"],
+  },
+  {
+    title: "Large Language Models",
+    icon: "🤖",
+    items: ["Fine-tuning & Model Specialization", "Autonomous Agent Systems"],
+  },
+  {
+    title: "Computer Vision",
+    icon: "👁️",
+    items: [
+      "Medical Image Captioning",
+      "Multimodal Learning (Video-Text Retrieval)",
+    ],
+  },
+];
 
 const ResearchInterests = () => {
   return (
@@ -82,17 +128,22 @@ const ResearchInterests = () => {
       <SectionWrapper>
         <SectionTitle>Research Interests</SectionTitle>
         <InterestsGrid>
-          {Object.entries(interests).map(([category, subfields]) => (
-            <InterestCard key={category}>
-              <InterestTitle>{category}</InterestTitle>
-              <SubfieldList>
-                {/* This line is now simplified to remove the error */}
-                {subfields.map((subfield, index) => (
-                  <SubfieldItem key={index}>{subfield}</SubfieldItem>
-                ))}
-              </SubfieldList>
-            </InterestCard>
-          ))}
+          {interests.map((cat, idx) => {
+            const accent = theme.accents[idx % theme.accents.length];
+            return (
+              <InterestCard key={cat.title} $accent={accent}>
+                <InterestTitle $accent={accent}>
+                  <span>{cat.icon}</span>
+                  {cat.title}
+                </InterestTitle>
+                <SubfieldList>
+                  {cat.items.map((subfield) => (
+                    <SubfieldItem key={subfield}>{subfield}</SubfieldItem>
+                  ))}
+                </SubfieldList>
+              </InterestCard>
+            );
+          })}
         </InterestsGrid>
       </SectionWrapper>
     </SectionContainer>
