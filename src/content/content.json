@@ -1,0 +1,420 @@
+{
+  "meta": {
+    "title": "Abtin Badie | Portfolio",
+    "description": "Computer Engineer building end-to-end AI systems — from deep learning research to production-ready full-stack apps."
+  },
+  "profile": {
+    "name": "Abtin Badie",
+    "eyebrow": "Computer Engineer · AI / Deep Learning",
+    "availability": "Open to research & engineering opportunities",
+    "roles": [
+      "Back End Developer",
+      "AI Researcher",
+      "Deep Learning Engineer",
+      "Full-Stack Builder"
+    ],
+    "headline": "B.Sc. Computer Engineering @ IUST. I build end-to-end AI systems — from deep learning research to production-ready full-stack apps.",
+    "about": [
+      "I'm a final-year Computer Engineering student at IUST who loves building things end-to-end — from deep-learning research in our NLP Lab to production back-ends as a Back End Developer at Namava. My work spans medical AI (my thesis, NeoScan), LLMs & agents, computer vision, and full-stack development with Python, Go, C#/.NET and React.",
+      "Outside of technology, I find balance and inspiration in various hobbies. I'm an avid enthusiast of music and cinema, always on the lookout for compelling stories in TV series and movies. Staying active is important to me, and I make it a point to hit the gym at least twice a week. I also have a passion for travel and aspire to explore different cultures around the world."
+    ],
+    "photo": "profile.jpg",
+    "location": "Tehran, Iran",
+    "email": "abtinbadie81@gmail.com",
+    "cta": {
+      "label": "Connect with me on Telegram",
+      "url": "https://t.me/Abtin_003"
+    }
+  },
+  "stats": [
+    { "value": 3.95, "decimals": 2, "suffix": "/4", "label": "GPA at IUST" },
+    { "value": 10, "decimals": 0, "suffix": "+", "label": "Open-source projects" },
+    { "value": 11, "decimals": 0, "suffix": "", "label": "Certifications" },
+    { "value": 8, "decimals": 0, "suffix": "", "label": "Courses as TA" }
+  ],
+  "socials": [
+    { "label": "Email", "url": "mailto:abtinbadie81@gmail.com", "icon": "email" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/abtin-badie-262690234/", "icon": "linkedin" },
+    { "label": "GitHub", "url": "https://github.com/abtin81badie", "icon": "github" },
+    { "label": "Telegram", "url": "https://t.me/Abtin_003", "icon": "telegram" }
+  ],
+  "sections": [
+    { "id": "about", "navLabel": "About", "title": "About Me", "subtitle": "A little bit about who I am", "visible": true },
+    { "id": "education", "navLabel": "Education", "title": "Education", "subtitle": "Where I learned the fundamentals", "visible": true },
+    { "id": "research", "navLabel": "Research", "title": "Research Interests", "subtitle": "The problems I love thinking about", "visible": true },
+    { "id": "featured", "navLabel": "Featured", "title": "Featured Project", "subtitle": "My undergraduate final project (thesis)", "visible": true },
+    { "id": "experience", "navLabel": "Experience", "title": "Experience", "subtitle": "Where I've worked, researched and taught", "visible": true },
+    { "id": "projects", "navLabel": "Projects", "title": "Projects", "subtitle": "Things I've designed, trained and shipped", "visible": true },
+    { "id": "skills", "navLabel": "Skills", "title": "Skills", "subtitle": "My toolbox", "visible": true },
+    { "id": "honors", "navLabel": "Honors", "title": "Honors & Awards", "subtitle": "Recognition along the way", "visible": true },
+    { "id": "certifications", "navLabel": "Certs", "title": "Licenses & Certifications", "subtitle": "Courses and credentials I've completed", "visible": true },
+    { "id": "resume", "navLabel": "Resume", "title": "My Resume", "subtitle": "", "visible": true }
+  ],
+  "education": [
+    {
+      "school": "Iran University of Science and Technology (IUST)",
+      "degree": "B.Sc. Computer Engineering",
+      "period": "Aug 2021 – Feb 2026",
+      "grade": "18.80 / 20 (≈ 3.95 / 4)",
+      "description": "",
+      "skills": ["C#", "C++", "Algorithms", "Data Structures", "Operating Systems", "AI", "Machine Learning", "+11 skills"]
+    }
+  ],
+  "research": [
+    {
+      "title": "Deep Learning",
+      "icon": "🔬",
+      "items": ["Convolutional Neural Networks (CNNs)", "Recurrent Neural Networks (RNNs) & LSTMs", "Transformer Architectures"]
+    },
+    {
+      "title": "Machine Learning",
+      "icon": "📊",
+      "items": ["Classical Algorithms (Decision Trees, SVMs)", "Genetic Algorithms", "Reinforcement Learning"]
+    },
+    {
+      "title": "Natural Language Processing",
+      "icon": "💬",
+      "items": ["Medical NLP & Report Generation", "Agentic Workflows & Tool Use"]
+    },
+    {
+      "title": "Large Language Models",
+      "icon": "🤖",
+      "items": ["Fine-tuning & Model Specialization", "Autonomous Agent Systems"]
+    },
+    {
+      "title": "Computer Vision",
+      "icon": "👁️",
+      "items": ["Medical Image Captioning", "Multimodal Learning (Video-Text Retrieval)"]
+    }
+  ],
+  "featured": {
+    "title": "NeoScan — Non-Invasive Neonatal Jaundice Detection",
+    "badges": ["🩺 Medical AI", "🎓 B.Sc. Thesis", "🚧 In Progress · Private"],
+    "affiliation": "Iran University of Science & Technology · Supervisors: Dr. Isa Zarepour & Dr. Sauleh Etemadi",
+    "summary": "NeoScan estimates a newborn's bilirubin level (TCB) from a single smartphone photo of the skin next to a color-calibration card — offering a low-cost, non-invasive alternative to painful blood draws for jaundice screening. The system pairs a robust classical computer-vision pipeline with a modern deep-learning model and ships as a full-stack, containerized application.",
+    "notice": "Not publicly available. Because NeoScan is still under active development, the source code and live demo are kept private for now. The summary, architecture and results below are shared from my thesis work.",
+    "link": "",
+    "pipeline": [
+      "Smartphone photo + color card",
+      "Canny + Hough card detection",
+      "Homography warp (DLT · SVD)",
+      "Grid segmentation",
+      "Von Kries white-balance",
+      "Swin + LoRA inference",
+      "Bilirubin (TCB) + risk level"
+    ],
+    "results": [
+      {
+        "tag": "Baseline",
+        "name": "1D-CNN (Keras)",
+        "accent": "cyan",
+        "highlight": false,
+        "metrics": [
+          { "label": "Correlation", "value": "42%" },
+          { "label": "MAE", "value": "3.12" },
+          { "label": "RMSE", "value": "4.05" }
+        ]
+      },
+      {
+        "tag": "Classical ML benchmark",
+        "name": "BiliBin (GPR + 111 features)",
+        "accent": "amber",
+        "highlight": false,
+        "metrics": [
+          { "label": "Approach", "value": "Feature eng." },
+          { "label": "RMSE", "value": "2.28" }
+        ]
+      },
+      {
+        "tag": "Final model",
+        "name": "Swin Transformer + LoRA",
+        "accent": "pink",
+        "highlight": true,
+        "metrics": [
+          { "label": "Correlation", "value": "≈ 85%" },
+          { "label": "MAE", "value": "1.50 mg/dL" },
+          { "label": "RMSE", "value": "2.20 mg/dL" }
+        ]
+      }
+    ],
+    "highlights": "Built a hardware-agnostic image-preprocessing pipeline (perspective correction via homography, projection-profile grid segmentation, median-based Von Kries color calibration). Benchmarked a 1D-CNN and classical ML regressors (KNN, SVR, Random Forest, Bayesian, GPR), then reached ≈85% correlation by fine-tuning a Swin Transformer with LoRA — training only ~0.7% of parameters to avoid overfitting. Delivered as a FastAPI backend + React frontend, fully Dockerized with CI/CD.",
+    "stack": [
+      "Python",
+      "PyTorch",
+      "Swin Transformer",
+      "LoRA / PEFT",
+      "Hugging Face",
+      "OpenCV",
+      "NumPy",
+      "FastAPI",
+      "React",
+      "Docker",
+      "CI/CD (GitHub Actions)",
+      "Clean Architecture"
+    ]
+  },
+  "experience": [
+    {
+      "organization": "Namava",
+      "icon": "🎬",
+      "summary": "Full-time · 10 mos",
+      "accent": "indigo",
+      "roles": [
+        {
+          "title": "Back End Developer",
+          "period": "Jan 2026 – Present · 6 mos",
+          "location": "Remote",
+          "description": "",
+          "skills": ["C#", ".NET", "REST APIs", "+12 skills"]
+        },
+        {
+          "title": "Back End Developer Intern",
+          "period": "Sep 2025 – Jan 2026 · 5 mos",
+          "location": "Tehran, Iran",
+          "description": "",
+          "skills": []
+        }
+      ]
+    },
+    {
+      "organization": "Natural Language Processing Lab — IUST",
+      "icon": "🧪",
+      "summary": "",
+      "accent": "pink",
+      "roles": [
+        {
+          "title": "Research Assistant",
+          "period": "Jun 2024 – Feb 2026 · 1 yr 9 mos",
+          "location": "Under the supervision of Dr. Sauleh Eetemadi",
+          "description": "Conducting research in medical AI and applied NLP — including my undergraduate thesis (NeoScan, non-invasive neonatal jaundice detection) and work on enhancing LLM performance in specialized domains and autonomous agent systems.",
+          "skills": ["LLMs", "NLP", "PyTorch", "+13 skills"]
+        }
+      ]
+    },
+    {
+      "organization": "TAPSI",
+      "icon": "🚖",
+      "summary": "",
+      "accent": "emerald",
+      "roles": [
+        {
+          "title": "Software Engineer · Internship",
+          "period": "Feb 2025 – Jun 2025 · 5 mos",
+          "location": "Tehran, Iran · Hybrid",
+          "description": "Built the MVP for TAPSI-Service, a new platform for on-demand home repair and utility services, as part of the system-design team — designing a scalable back-end with Python, FastAPI and PostgreSQL.",
+          "skills": ["Python", "Software Infrastructure", "+3 skills"]
+        }
+      ]
+    },
+    {
+      "organization": "Iran University of Science and Technology — Teaching",
+      "icon": "🎓",
+      "summary": "8 teaching roles",
+      "accent": "cyan",
+      "roles": [
+        {
+          "title": "Head Teaching Assistant — Operating Systems",
+          "period": "Sep 2025 – Feb 2026 · 6 mos",
+          "location": "Instructors: Dr. Entezari-Maleki & Dr. Azhari",
+          "description": "",
+          "skills": ["C", "Team Leadership", "+3 skills"]
+        },
+        {
+          "title": "Head Teaching Assistant — Theory of Languages & Automata",
+          "period": "Feb 2025 – Aug 2025 · 7 mos",
+          "location": "Instructors: Dr. Entezari-Maleki & Dr. Ghayour Baghbani",
+          "description": "",
+          "skills": ["Teamwork", "Team Leadership"]
+        },
+        {
+          "title": "Teaching Assistant — Artificial Intelligence",
+          "period": "Sep 2024 – Jan 2025 · 5 mos",
+          "location": "Instructor: Dr. Arash Abdi Hejrandoost",
+          "description": "",
+          "skills": ["Teamwork"]
+        },
+        {
+          "title": "Teaching Assistant — Discrete Mathematics",
+          "period": "Feb 2024 – Jun 2024 · 5 mos",
+          "location": "Instructor: Dr. Vesal Hakami",
+          "description": "",
+          "skills": []
+        },
+        {
+          "title": "Teaching Assistant — Designing Digital Computer Systems",
+          "period": "Feb 2024 – Jun 2024 · 5 mos",
+          "location": "Instructor: Dr. Hakem Beitollahi",
+          "description": "",
+          "skills": []
+        },
+        {
+          "title": "Teaching Assistant — Advanced Programming",
+          "period": "Feb 2024 – Jun 2024 · 5 mos",
+          "location": "Instructor: Dr. MalekiMajd",
+          "description": "",
+          "skills": []
+        },
+        {
+          "title": "Teaching Assistant — Fundamental Programming",
+          "period": "Sep 2023 – Jan 2024 · 5 mos",
+          "location": "Instructor: Dr. MalekiMajd",
+          "description": "",
+          "skills": []
+        },
+        {
+          "title": "Teaching Assistant — Logical Circuits",
+          "period": "Sep 2023 – Jan 2024 · 5 mos",
+          "location": "Instructor: Dr. Kashi",
+          "description": "",
+          "skills": []
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "IdeYar: Crowdfunding Platform Front-End",
+      "url": "https://github.com/mosaic-2/IdeYar-front",
+      "category": "Web",
+      "description": [
+        "Led the front-end development and system design for a Kickstarter-inspired web platform, enabling users to create, discover, and fund creative projects.",
+        "Architected a scalable and maintainable front-end using React, designing a component-based structure, state management strategy, and RESTful API integration.",
+        "Developed key user-facing features, including dynamic project pages, user authentication, profile dashboards, and a streamlined campaign creation process."
+      ],
+      "tech": ["React", "Front-End Development", "System Design", "UI/UX"]
+    },
+    {
+      "title": "Medical Image Captioning with BLIP & Flan-T5",
+      "url": "https://github.com/abtin81badie/medical-image-captioning",
+      "category": "Deep Learning",
+      "description": [
+        "Engineered a two-stage captioning pipeline using BLIP for initial generation and Flan-T5 for refinement, enhancing caption descriptiveness for radiology images.",
+        "Fine-tuned the BLIP model on the ROCOv2 dataset to adapt its vision-language understanding to the specialized medical imaging domain.",
+        "Developed an automated evaluation framework using BERTScore and ROUGE-L to rigorously measure the semantic similarity and accuracy of generated captions."
+      ],
+      "tech": ["Image Captioning", "PyTorch", "Hugging Face", "BLIP", "Flan-T5"]
+    },
+    {
+      "title": "Persian Video Understanding: Fine-Tuning CLIP & CLIP4Clip",
+      "url": "https://github.com/abtin81badie/Deep-Learning",
+      "category": "Deep Learning",
+      "description": [
+        "Adapted CLIP and CLIP4Clip models for Persian by fine-tuning on the MSR-VTT dataset with 10,000 translated captions, enabling bilingual video-text retrieval.",
+        "Implemented multilingual text encoders with custom tokenization and efficient training on an NVIDIA V100 GPU using weighted contrastive loss and dynamic frame sampling.",
+        "Achieved 84.1% R@1 accuracy in Persian text-to-video retrieval, outperforming zero-shot baselines, and developed a reusable GitHub framework for multimodal research."
+      ],
+      "tech": ["Multimodal Learning", "PyTorch", "Video-Text Retrieval"]
+    },
+    {
+      "title": "Image Classification DSL: A Language for Deep Learning",
+      "url": "https://github.com/abtin81badie/Image-DSL",
+      "category": "Languages & Tools",
+      "description": [
+        "Developed a Domain-Specific Language (DSL) using ANTLR4 and Python to simplify image classification, allowing non-programmers to define models with intuitive syntax.",
+        "Designed a custom grammar, built an Abstract Syntax Tree (AST) parser, and created a code generator that produces optimized TensorFlow and Keras models from the DSL.",
+        "Reduced model definition code by over 90% and accelerated development time by 10x, enabling rapid, standardized prototyping for ML experimentation."
+      ],
+      "tech": ["Domain-Specific Languages", "ANTLR4", "Python", "TensorFlow"]
+    },
+    {
+      "title": "Deep Learning Course Workshops",
+      "url": "https://github.com/abtin81badie/Practical-Deep-Learning-Series",
+      "category": "Deep Learning",
+      "description": [
+        "Established a comprehensive workshop series covering fundamentals like NumPy, Pandas, and PyTorch, emphasizing GPU-accelerated tensor operations.",
+        "Built a diverse range of models from scratch, including CNNs, RNNs, LSTMs, and generative models like VAEs and Conditional GANs.",
+        "Implemented advanced, parameter-efficient fine-tuning (PEFT) techniques, including building a Transformer from the ground up and using LoRA to adapt a Stable Diffusion model."
+      ],
+      "tech": ["PyTorch", "Generative Models", "PEFT", "CNNs", "Transformers"]
+    },
+    {
+      "title": "Decision Tree for Fraud Detection",
+      "url": "https://github.com/abtin81badie/decision-tree",
+      "category": "Machine Learning",
+      "description": [
+        "Implemented a classical Decision Tree algorithm from scratch to perform fraud detection, demonstrating an understanding of core ML principles."
+      ],
+      "tech": ["Python", "Classical Machine Learning"]
+    },
+    {
+      "title": "SVM for Text Classification",
+      "url": "https://github.com/abtin81badie/SVM",
+      "category": "Machine Learning",
+      "description": [
+        "Built a Support Vector Machine (SVM) from the ground up for the task of classifying text documents."
+      ],
+      "tech": ["Python", "NLP", "Classical Machine Learning"]
+    },
+    {
+      "title": "Genetic Algorithm for Clustering",
+      "url": "https://github.com/abtin81badie/genetics",
+      "category": "Machine Learning",
+      "description": [
+        "Engineered a Genetic Algorithm to solve a clustering problem, effectively grouping data points into distinct, optimized clusters."
+      ],
+      "tech": ["Python", "Optimization Algorithms"]
+    },
+    {
+      "title": "MLP Neural Networks with TensorFlow",
+      "url": "https://github.com/abtin81badie/Neural-Network",
+      "category": "Deep Learning",
+      "description": [
+        "Built and trained Multi-Layer Perceptron (MLP) networks for function approximation and CIFAR-10 image classification.",
+        "Conducted full hyperparameter tuning to optimize model accuracy and performance."
+      ],
+      "tech": ["Python", "TensorFlow", "Keras", "Deep Learning"]
+    },
+    {
+      "title": "Deep Reinforcement Learning Agents",
+      "url": "https://github.com/abtin81badie/RL",
+      "category": "Machine Learning",
+      "description": [
+        "Engineered deep reinforcement learning agents for pendulum balancing (achieving a 95% success rate) and the game of Othello (reaching an 82% win rate)."
+      ],
+      "tech": ["Python", "Reinforcement Learning"]
+    }
+  ],
+  "skills": [
+    {
+      "title": "AI & Machine Learning",
+      "icon": "🧠",
+      "accent": "indigo",
+      "skills": ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "LangChain", "Hugging Face", "NumPy", "Pandas", "Deep Learning", "CNNs", "RNNs / LSTMs", "Transformers", "LLMs", "NLP", "Computer Vision", "PEFT / LoRA"]
+    },
+    {
+      "title": "Web & Programming",
+      "icon": "💻",
+      "accent": "pink",
+      "skills": ["Python", "JavaScript", "TypeScript", "Go", "SQL", "C / C++", "FastAPI", "Django", "Fiber (Go)", "GORM", "React", "HTML5", "CSS3", "PostgreSQL", "MySQL"]
+    },
+    {
+      "title": "DevOps, Tools & Professional",
+      "icon": "⚙️",
+      "accent": "cyan",
+      "skills": ["Git", "Docker", "Linux", "Bash", "CI/CD", "Android", "Kotlin", "Teamwork", "Team Leadership"]
+    }
+  ],
+  "honors": [
+    { "icon": "🥇", "title": "Top 10% Undergraduate Student", "detail": "Iran University of Science and Technology (Present)" },
+    { "icon": "🥈", "title": "Ranked 2nd among first-year cohorts", "detail": "2022 — Iran University of Science and Technology" },
+    { "icon": "🏅", "title": "Ranked 1st for academic achievement", "detail": "2018, 2019, 2021 — Tohid High School and Ehsan School" }
+  ],
+  "certifications": [
+    { "title": "MongoDB C# Developer Path", "issuer": "MongoDB", "icon": "🍃", "date": "Issued Dec 2025", "credentialId": "MDB6j59sdww3t", "url": "", "skills": [] },
+    { "title": "Redis for .NET Developers", "issuer": "Redis", "icon": "🟥", "date": "Issued Nov 2025", "credentialId": "vwxbze8cue8znv", "url": "", "skills": [] },
+    { "title": "1st LLM-Agents Hackathon (In Person)", "issuer": "Sharif Artificial Intelligence Chapter", "icon": "🏆", "date": "Issued Jul 2025", "credentialId": "", "url": "", "skills": [] },
+    { "title": "Task-Oriented Bootcamp in Software Engineering with Golang", "issuer": "Quera", "icon": "🐹", "date": "Issued Jan 2025", "credentialId": "kIQzwH4J", "url": "", "skills": ["HTTP", "Testing", "+21 skills"] },
+    { "title": "Professional Project-Oriented Course in Machine Learning with Python", "issuer": "Quera", "icon": "🤖", "date": "Issued Dec 2024", "credentialId": "mVJmmbkV", "url": "", "skills": ["NumPy", "Machine Learning", "+4 skills"] },
+    { "title": "Advanced Algorithmic Thinking and Data Structures", "issuer": "Quera", "icon": "🧩", "date": "Issued Dec 2024", "credentialId": "1DeaFNu7", "url": "", "skills": ["Algorithms", "C++", "+4 skills"] },
+    { "title": "Professional Project-Oriented Course in Frontend Development with React", "issuer": "Quera", "icon": "⚛️", "date": "Issued Dec 2024", "credentialId": "xi8WxBbA", "url": "", "skills": ["React.js", "HTML", "+4 skills"] },
+    { "title": "Professional Project-Oriented Course in Backend Development with Django", "issuer": "Quera", "icon": "🌿", "date": "Issued Oct 2024", "credentialId": "Y4b6ahSU", "url": "", "skills": ["Templates", "Application Migrations", "+8 skills"] },
+    { "title": "Project-Oriented Course in Front-End Web Development", "issuer": "Quera", "icon": "🎨", "date": "Issued Aug 2024", "credentialId": "77s2N0Es", "url": "", "skills": [] },
+    { "title": "Data Structures", "issuer": "University of California San Diego", "icon": "🎓", "date": "Issued Dec 2023", "credentialId": "8YWZLPWP3T9T", "url": "", "skills": [] },
+    { "title": "Algorithmic Toolbox", "issuer": "University of California San Diego", "icon": "🎓", "date": "Issued Nov 2023", "credentialId": "A9RYCC7SVY9N", "url": "", "skills": [] }
+  ],
+  "resume": {
+    "text": "Feel free to download my resume for a more detailed look at my skills, experience, and academic background.",
+    "file": "AbtinBadie_CV.pdf",
+    "downloadName": "Abtin_Badie_CV.pdf"
+  }
+}
